@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.entity.User">
+    <id column="us_phone" jdbcType="VARCHAR" property="usPhone" />
+    <result column="us_password" jdbcType="VARCHAR" property="usPassword" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    us_phone, us_password
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.User">
+    insert into user (us_phone, us_password)
+    values (#{usPhone,jdbcType=VARCHAR}, #{usPassword,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="usPhone != null">
+        us_phone,
+      </if>
+      <if test="usPassword != null">
+        us_password,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="usPhone != null">
+        #{usPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="usPassword != null">
+        #{usPassword,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.User">
+    update user
+    <set>
+      <if test="usPassword != null">
+        us_password = #{usPassword,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.User">
+    update user
+    set us_password = #{usPassword,jdbcType=VARCHAR}
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.entity.User">
+    <id column="us_phone" jdbcType="VARCHAR" property="usPhone" />
+    <result column="us_password" jdbcType="VARCHAR" property="usPassword" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    us_phone, us_password
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.entity.User">
+    insert into user (us_phone, us_password)
+    values (#{usPhone,jdbcType=VARCHAR}, #{usPassword,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="usPhone != null">
+        us_phone,
+      </if>
+      <if test="usPassword != null">
+        us_password,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="usPhone != null">
+        #{usPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="usPassword != null">
+        #{usPassword,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.entity.User">
+    update user
+    <set>
+      <if test="usPassword != null">
+        us_password = #{usPassword,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.entity.User">
+    update user
+    set us_password = #{usPassword,jdbcType=VARCHAR}
+    where us_phone = #{usPhone,jdbcType=VARCHAR}
+  </update>
+  <insert id="insertUser" parameterType="com.entity.User">
+    insert into user (us_phone, us_password)
+    values (#{usPhone,jdbcType=VARCHAR}, #{usPassword,jdbcType=VARCHAR})
+  </insert>
+</mapper>

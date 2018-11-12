@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cooperation.iml" filepath="$PROJECT_DIR$/cooperation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cooperation/develop/develop.iml" filepath="$PROJECT_DIR$/../cooperation/develop/develop.iml" />
+    </modules>
+  </component>
+</project>

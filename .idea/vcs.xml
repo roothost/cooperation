@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cooperation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cooperation/develop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cooperation/develop/src/main/java/com/controller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cooperation/develop/src/main/java/com/dao" vcs="Git" />
+  </component>
+</project>
